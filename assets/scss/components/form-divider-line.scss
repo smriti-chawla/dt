@@ -1,0 +1,21 @@
+//Styling of form divider line
+// ========================
+//
+.form-divider {
+  text-align: center;
+  position: relative;
+  .form-divider-line {
+    border-top: 1px solid $blue-10;
+  }
+  .divider-text {
+    margin-top: -10px;
+    span {
+      background: $white;
+      color: $grey-40;
+      text-align: center;
+      padding: 0 5px;
+      margin-top: -20px;
+      text-transform: uppercase;
+    }
+  }
+}

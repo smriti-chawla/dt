@@ -1,0 +1,54 @@
+<header ng-controller="mainHeaderCtrl as header" fixed-header="fix-to-top">
+    <div class="container">
+        <a class="logo" href="#">
+            <img src="../../../assets/images/logo2.png" alt="logo">
+        </a>
+        <div class="top-menu">
+            <div class="language">
+                <span class="lang-value">EN</span>
+                <select name="langList" class="langList">
+                    <option value="EN">EN</option>
+                    <option value="AR">AR</option>
+                </select>
+            </div>
+
+            <div class="currency">
+                <span>UAE</span>
+                <select name="currList" class="currList">
+                    <option value="UAE">UAE</option>
+                </select>
+            </div>
+
+            <div class="sign-in-section">
+                <input type="button" class="yellow-btn" value="Sign In & Account" />
+            </div>
+        </div>
+        <nav class="clearfix nav-desktop">
+            <ul class="header-nav">
+
+                <li class="header-item">
+                    <a href="link">Destination</a>
+                </li>
+                <li class="header-item">
+                    <a href="link">Experiences</a>
+                </li>
+                <li class="header-item">
+                    <a href="link">Packages</a>
+                </li>
+                <li class="header-item">
+                    <a href="link">Hotels</a>
+                </li>
+                <li class="header-item">
+                    <a href="link">Trip Planner</a>
+                </li>
+                <li class="header-item">
+                    <a href="link">Stories</a>
+                </li>
+
+
+            </ul>
+            <span class="search" ng-click="header.search=true"></span>
+        </nav>
+
+    </div>
+</header>

@@ -1,0 +1,31 @@
+//Styling of login form
+// ========================
+//
+.login-form {
+  overflow: hidden;
+  input, select {
+    width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #f5fafd;
+  }
+  input[type="checkbox"] {
+    width: auto;
+  }
+  .sign-in-btn {
+    @extend .yellow-btn;
+    margin-right: 26px;
+    width: 120px;
+  }
+  li {
+    margin-top: 17px;
+  }
+  .link-container {
+    float: right;
+  }
+  label {
+    padding-bottom: 10px;
+  }
+}
+

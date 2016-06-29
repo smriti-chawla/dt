@@ -1,0 +1,102 @@
+//Styling of buttons
+// ========================
+//
+.purple-btn {
+  background: $light-purple;
+  height: 40px;
+  text-align: center;
+  display: inline-block;
+  //line-height: 41px;
+  color: $white;
+  border: 1px solid $grey
+}
+
+.btn-style {
+  height: 39px;
+  //line-height: 39px;
+  font-size: 14px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 0;
+  &:focus, &:hover {
+    text-decoration: none;
+  }
+}
+
+.yellow-btn {
+  @extend .btn-style;
+  width: 140px;
+  font-family: calibrib;
+  background: #f7dd00;
+  color: #394397;
+  border: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  @include box-shadow( 0,2px, 0,0, #c5bb38);
+}
+
+.facebook-btn {
+  @extend .btn-style;
+  background: #3b5998;
+  color: $white;
+  width: 120px;
+  line-height: 41px;
+  border-bottom: 2px solid #254892;
+  position: relative;
+  padding-left: 10px;
+  float: left;
+  &:focus, &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+  &:before {
+    content: '';
+    background: url(../../../assets/images/sprite.png) no-repeat -8px -192px;
+    width: 18px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 8px;
+    left: 20px;
+  }
+}
+
+.new-btn {
+  @extend .btn-style;
+  width: 100%;
+  color: #5d65a8;
+  line-height: 2.4em;
+  font-family: calibrib;
+  border: 1px solid #e8e8e8;
+}
+
+.forgot-password {
+  color: #4d75e5;
+  font-size: 13px;
+}
+
+.google-plus-btn {
+  @extend .btn-style;
+  background: $white;
+  float: left;
+  margin-left: 30px;
+  width: 120px;
+  line-height: 41px;
+  border: 1px solid #e8e8e8;
+  -webkit-box-shadow: 0 2px 0 #f2f2f2;
+  -moz-box-shadow: 0 2px 0 #f2f2f2;
+  box-shadow: 0 2px 0 #f2f2f2;
+  float: right;
+  position: relative;
+  padding-left: 10px;
+  &:before {
+    content: '';
+    background: url(../../../assets/images/sprite.png) no-repeat -8px -168px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 18px;
+  }
+}

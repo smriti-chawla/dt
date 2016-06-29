@@ -1,0 +1,103 @@
+@import "../../../assets/scss/include";
+
+// Styling of sign in other section
+//
+// ===================================
+.signin-other {
+    position: relative;
+    width: 300px;
+    padding: 30px 0 30px 30px;
+    vertical-align: top;
+    //text-align: left;
+    li {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: url("../../../assets/images/sprite.png") no-repeat -200px -8px;
+            position: absolute;
+            left: 5px;
+        }
+        span {
+            padding: 0 0 15px 0;
+            display: inline-block;
+        }
+        .btn-container {
+            padding-bottom: 20px;
+        }
+    }
+    .sign-in-link {
+        font-family: calibrib;
+        text-transform: uppercase;
+        text-decoration: underline;
+    }
+    .grey-text {
+        color: $grey-30;
+        padding-bottom: 30px;
+    }
+}
+
+// Arabic view  styling
+.arabic {
+    .signin-other-container {
+        padding: 0 5% 0 0;
+        float: left;
+    }
+    .signin-other {
+        padding: 30px 30px 30px 0;
+        //text-align: right;
+        li:before {
+            left:auto;
+            right: 8px;
+            @include rotate(180);
+        }
+    }
+    .google-plus-btn {
+        direction: ltr;
+    }
+}
+
+//Responsive  view code
+@include breakpoint(mobile) {
+    .btn-container {
+        display: inline-block;
+    }
+    h2 {
+        padding: 0 22px;
+    }
+    .signin-other {
+        width: auto;
+    }
+    .signin-other-container {
+        width:100%;
+        display: block;
+        text-align: center;
+
+    }
+    .signin-other, .arabic .signin-other {
+        padding: 0 0 30px 0;
+        display: inline-block;
+        li {
+            text-align: center;
+            span {
+                display: none;
+            }
+            &:before {
+                background: none;
+                width: 0;
+            }
+        }
+        .signin-other-link {
+            text-align: center;
+            div {
+                padding-top: 10px;
+            }
+        }
+    }
+    .arabic {
+        .signin-other-container {
+            padding: 0;
+        }
+    }
+}

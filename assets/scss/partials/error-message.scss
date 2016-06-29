@@ -1,0 +1,19 @@
+//Styling of error message
+// ========================
+//
+.error-message {
+  color: #ee7679;
+  display: block;
+  margin: 5px 0px;
+  a{
+    color: #ee7679;
+    text-decoration: underline;
+  }
+}
+
+.error-styling {
+  margin-bottom: 30px;
+}
+.error-input{
+  border: 1px solid #ee7679;
+}

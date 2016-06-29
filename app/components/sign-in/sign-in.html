@@ -1,0 +1,28 @@
+<div class="user-module">
+    <h6>Sign In</h6>
+    <login logintype="page" class="ng-isolate-scope"><div>
+        <ng-form class="sign-in-page ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" name="$ctrl.usersignIn">
+            <ul>
+                <li>
+                    <label class="ng-binding">Email page</label>
+                    <input type="email" ng-class="$ctrl.usersignIn.email.$invalid &amp;&amp; $ctrl.usersignIn.showSigninFormValidation ? 'error-input' : ''" ng-pattern="/^[_a-zA-Z0-9]+(\.[_a-zA-Z0-9]+)*@[a-z0-9-][a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/" ng-maxlength="100" name="email" ng-model="$ctrl.user.email" required="" class="ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength" aria-invalid="true">
+                    <!-- ngIf: $ctrl.usersignIn.email.$invalid && $ctrl.showSigninFormValidation -->
+                </li>
+                <li>
+                    <label>Password</label>
+                    <input type="password" name="password" ng-model="$ctrl.user.password" required="" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" aria-invalid="true">
+                    <!-- ngIf: $ctrl.usersignIn.password.$invalid && $ctrl.showSigninFormValidation -->
+                </li>
+                <li class="clearfix">
+                    <input id="checkbox-1" class="checkbox-custom" name="remember-checkbox" type="checkbox">
+                    <label for="checkbox-1" class="checkbox-custom-label remember-me">Remember me</label>
+                    <span ng-transclude="" class="link-container"><a ng-href="/forgotpassword/" class="forgot-password-link ng-scope" href="/forgotpassword/">forgot password?</a></span>
+                </li>
+                <li>
+                    <button class="yellow-btn" ng-click="$ctrl.loginCustomer($ctrl.usersignIn.$valid)">sign in</button>
+                </li>
+            </ul>
+        </ng-form>
+    </div>
+    </login>
+</div>

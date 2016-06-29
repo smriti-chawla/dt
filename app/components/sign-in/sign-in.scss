@@ -1,0 +1,131 @@
+@import "../../../assets/scss/include";
+
+//Styling of signin page
+//
+// ===============================
+.user-module {
+    .forgot-password-link {
+        float: right;
+        margin-top: 15px;
+        text-transform: capitalize;
+    }
+}
+@include breakpoint(mobile) {
+    .user-module {
+        .forgot-password-link {
+            float: left;
+        }
+        .remember-me {
+            display: block;
+        }
+    }
+}
+.link-container {
+    float: right;
+}
+.main-container {
+  padding-bottom: 150px;
+  text-align: center;
+  background: #fdfcfc;
+
+}
+.user-module-container {
+  display: inline-block;
+  max-width: 750px;
+  width: 100%;
+  text-align: initial;
+}
+.user-module {
+  text-align: left;
+  display: table-cell;
+  background: $white;
+  width: 55%;
+  padding: 15px 30px 30px 30px;
+  border: 1px solid #d8e6f7;
+  @include box-shadow(0, 0, 1px, 2px, rgba(0, 0, 0, 0.05), false);
+  vertical-align: top;
+  @include border-radius(5px);
+  label{
+    text-transform: capitalize;
+    margin: 15px 0 0;
+  }
+  .checkbox-custom-label {
+    text-transform: none;
+  }
+  input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+  }
+  input {
+    margin: 15px 0 0;
+  }
+  .yellow-btn {
+    margin: 15px 0 0;
+  }
+}
+
+.arabic {
+  h2, h6, .user-module, .yellow-btn,.forgot-password-link {
+    //@extend .rtl-content;
+  }
+  label,.error-message {
+    width:100%;
+    //@extend .rtl-content;
+    //div {
+    //  @extend .rtl-content;
+    //}
+  }
+  .signin-other {
+    div, span, li, .sign-in-link{
+      //@extend .rtl-content;
+    }
+    .btn-container {
+      //direction: ltr;
+    }
+  }
+  .user-module {
+    //float: right;
+    //text-align: right;
+    margin: 0;
+  }
+  .signin-other-container {
+    //float: left;
+  }
+  .checkbox-custom, .checkbox-custom-label,
+  .radio-custom, .radio-custom-label {
+    padding-left: 0;
+    padding-right: 25px;
+    text-transform: none;
+  }
+
+  .checkbox-custom + .checkbox-custom-label:before,
+  .radio-custom + .radio-custom-label:before {
+    left: auto;
+    right: 0;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}
+
+
+//Responsive  view code
+@include breakpoint(iPad) {
+  .user-module {
+    width: 53%;
+  }
+}
+@include breakpoint(mobile) {
+  .main-container {
+    padding-bottom: 40px;
+  }
+  .welcome-msg {
+    display: block;
+  }
+  .user-module {
+    width: 100%;
+    display: inline-block;
+    .yellow-btn {
+      width: 100%;
+    }
+
+  }
+}

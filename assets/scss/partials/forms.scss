@@ -1,0 +1,17 @@
+//Styling of form elements
+// ========================
+//
+input, select {
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #f5fafd;
+  background-image: none;
+  border: 1px solid #d8e6f7;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  &:focus {
+    outline: 2px solid #93bcfb;
+  }
+}

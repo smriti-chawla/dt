@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+    <title>Do Trips</title>
+    <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/header-component.css">
+    <link rel="stylesheet" href="css/components/sign-in.css">
+    <link rel="stylesheet" href="css/components/sign-in-other.css">
+    <script src="w3data.js"></script>
+</head>
+
+<body>
+    <!-- Component Header -->
+    <div w3-include-html="app/components/header-component/header-component.html"></div>
+    <div w3-include-html="app/components/sign-in-other/sign-in-other.html"></div>
+    <div w3-include-html="app/components/sign-in/sign-in.html"></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+        setTimeout(function() {
+
+
+            $('.product-gallery .owl-carousel').owlCarousel({
+                items: 4,
+                loop: true,
+                nav: true,
+                dots: false,
+
+                responsive: {
+                    0: {
+                        items: 2,
+                        nav: false,
+                        dots: false,
+                        margin: 5
+                    },
+
+                    768: {
+                        dots: false,
+                        nav: true,
+                        items: 3
+
+                    },
+                    1024: {
+                        dots: false,
+                        nav: true,
+                        items: 3,
+
+                    },
+
+                    1025: {
+                        dots: false,
+                        nav: true,
+                        items: 4
+                    }
+                }
+            });
+
+
+
+
+
+            $(window).on("resize", function() {
+                loadCarousel();
+            });
+
+            loadCarousel()
+
+            function loadCarousel() {
+                var windowWidth = $(window).width();
+
+                console.log(windowWidth < 768);
+
+                if (windowWidth < 768) {
+
+                    $('.product-view .owl-carousel').owlCarousel({
+                        items: 1,
+                        loop: true,
+                        nav: false,
+                        dots: true,
+                        callbacks: true
+                    });
+                } else {
+                    $('.product-view .owl-carousel').owlCarousel('destroy');
+                }
+            }
+
+
+
+        }, 200);
+    });
+
+    w3IncludeHTML();
+    </script>
+</body>
+
+</html>

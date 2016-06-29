@@ -1,0 +1,50 @@
+//Styling of checkbox and radio buttons
+// ========================
+//
+.checkbox-custom, .radio-custom {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-custom, .checkbox-custom-label, .radio-custom, .radio-custom-label {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+.checkbox-custom-label, .radio-custom-label {
+  position: relative;
+  color: #909090;
+}
+
+.checkbox-custom + .checkbox-custom-label:before, .radio-custom + .radio-custom-label:before {
+  content: '';
+  background: #fff;
+  border: 2px solid #ddd;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:before {
+  background: #394397;
+  -webkit-box-shadow: inset 0px 0px 0px 2px $white;
+  -moz-box-shadow: inset 0px 0px 0px 2px $white;
+  box-shadow: inset 0px 0px 0px 2px $white;
+  color: #fff;
+}
+
+.radio-custom + .radio-custom-label:before {
+  border-radius: 50%;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+  color: #bbb;
+}

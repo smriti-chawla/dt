@@ -1,0 +1,38 @@
+/* Includes theme & Mixins
+-------------------------------*/
+//Mixins
+@import "mixins/buttons";
+@import "mixins/icon";
+@import "mixins/border";
+@import "mixins/links";
+@import "mixins/mixins";
+
+//partials import
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/fonts";
+@import "partials/forms";
+@import "partials/buttons";
+@import "partials/icon-style";
+@import "partials/error-message";
+@import "partials/success-message";
+@import "partials/checkbox-radio";
+@import "partials/heading";
+@import "partials/badge-style";
+
+
+// components import
+@import "components/hero-banner";
+@import "components/login-form";
+@import "components/forgot-password-form";
+@import "components/sign-in-popup";
+@import "components/form-divider-line";
+@import "components/view-all";
+@import "components/nav-tab";
+@import "components/header-submenu";
+@import "components/date-picker";
+@import "components/currencySelector";
+
+
+
+

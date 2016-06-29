@@ -1,0 +1,16 @@
+//Styling of form divider line
+// ========================
+//
+.view-all {
+  a {
+    color: #4d75e5;
+    &:after {
+      content: '';
+      background: url(../../../assets/images/sprite.png) no-repeat -8px -269px;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,168 @@
+//Styling of nav tab section
+// ========================
+//
+
+.nav-header {
+  max-width: 1078px;
+  margin: 0 auto;
+  li {
+    width: 140px;
+    display: inline-block;
+    @extend .btn-style;
+    background: $white;
+    text-transform: uppercase;
+    a {
+      font-size: 16px;
+      font-family: 'calibrib';
+      background: transparent;
+      text-decoration: none;
+      height: 40px;
+      display: inline-block;
+      width: 100%;
+      vertical-align: middle;
+      padding: 10px 0;
+    }
+    a:hover {
+      color: #394397;
+    }
+  }
+  .active {
+    @extend .yellow-btn;
+    font-size: 16px;
+    height: 40px;
+    box-shadow: none;
+  }
+}
+.tab-content {
+  background: #4f589e;
+  margin: 0 auto;
+  max-width: 1078px;
+}
+.tab-pane {
+  label {
+    text-transform: uppercase;
+    color: #7c87d5;
+    font-size: 16px;
+    padding: 0 0 15px 55px;
+    &:before {
+      background: url(../../../assets/images/sprite.png) no-repeat -57px -102px;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+    }
+  }
+  .location-label {
+    &:before {
+      background-position: -57px -153px;
+    }
+  }
+  > div:first-child {
+    border-right: 2px solid #6871b8;
+  }
+  > div {
+    float: left;
+    width: 40%;
+    position: relative;
+    padding: 15px 0 0;
+    position: relative;
+    select {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      height: 100%;
+      top: 0;
+      width: 100%;
+    }
+  }
+  .go-btn {
+    width: 20%;
+    padding: 0;
+    height: 84px;
+    position: relative;
+    box-shadow: none;
+    &:after {
+      background: url(../../../assets/images/sprite.png) no-repeat -57px -200px;
+      width: 30px;
+      height: 30px;
+      content: '';
+      position: absolute;
+      top: 34px;
+      right: 42px;
+    }
+    > input {
+      width:100%;
+      height: 100%;
+      @extend .yellow-btn;
+      font-size: 20px;
+      text-align: left;
+      padding-left: 50px;
+    }
+  }
+  .experience-select, .destination-select {
+    padding: 10px 20px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 16px;
+    &:after {
+      background: url(../../../assets/images/sprite.png) no-repeat -57px -231px;
+      width: 12px;
+      height: 12px;
+      content: '';
+      position: absolute;
+      right: 20px;
+    }
+    select {
+      text-transform: uppercase;
+      z-index: 1;
+      font-size: 16px;
+    }
+    span {
+      color: #c0c5f2;
+    }
+  }
+
+}
+
+
+//Arabic version styling
+.arabic {
+  .tab-pane {
+    > div {
+      float: right;
+    }
+    label {
+      padding: 0 55px 15px 0;
+      &:before {
+        right: 20px
+      }
+    }
+    .experience-select, .destination-select {
+      &:after {
+        right: auto;
+        left: 20px;
+      }
+    }
+     > div:first-child {
+      border-left: 2px solid #6871b8;
+       border-right: 0;
+    }
+  }
+  .hotel-booking-section > div {
+    float: right;
+    border-left: 2px solid #6871b8;
+    border-right: 0;
+  }
+  #hotels {
+    > div:first-child {
+      border: 0;
+    }
+  }
+  .check-in .value:after, .check-out .value:after, .rooms .value:after, .adults .value:after, .children .value:after {
+    left: 20px;
+    right: auto;
+  }
+
+}

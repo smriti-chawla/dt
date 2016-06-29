@@ -1,0 +1,219 @@
+//Styling of header section
+// ========================
+//
+@import "../../../assets/scss/include";
+header {
+    height: 150px;
+    position: relative;
+    // TODO: replace this with mixin
+    background: rgba(2,2,2,1);
+    background: -moz-linear-gradient(top,#000000 0%, rgba(126, 150, 185, 0.01) 100%);
+    background: -webkit-linear-gradient(top,#000000 0%, rgba(126, 150, 185, 0.01) 100%);
+    background: -o-linear-gradient(top,#000000 0%, rgba(126, 150, 185, 0.01) 100%);
+    background: -ms-linear-gradient(top,#000000 0%, rgba(126, 150, 185, 0.01) 100%);
+    background: linear-gradient(to bottom, #000000 0%, rgba(126, 150, 185, 0.01) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#273528', GradientType=0 );
+
+    nav {
+        float: right;
+        clear: both;
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+    }
+    .container {
+        position: relative;
+    }
+
+
+}
+.header-item {
+    position: relative;
+    &:hover, &:focus, &:active {
+        .header-submenu {
+            display: block;
+        }
+    }
+    > a {
+        color: $white;
+        text-transform: uppercase;
+        //padding: 0 25px;
+        //display: inline-block;
+        outline: none;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+.header-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    .list-section{
+        .nav-list {
+            background: $white;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            > ul {
+                padding-left: 20px;
+                > li {
+                    width: 33.33%;
+                    display: inline-block;
+                }
+            }
+        }
+        > li{
+            width:14.28%;
+            vertical-align: top;
+        }
+
+    }
+
+    .img-container {
+        padding: 15px 10px 0;
+    }
+}
+.logo {
+    position: absolute;
+    top: 15px;
+}
+.right-container {
+    float: right;
+}
+.top-menu {
+    float: right;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 25px;
+}
+
+.search {
+    background: url(../../../assets/images/sprite.png) no-repeat -4px -122px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+}
+
+
+.sign-in-section {
+    position: relative;
+    display: inline-block;
+    > input[type="button"]{
+        box-shadow: none;
+    }
+}
+.navbar-responsive {
+    display: none;
+}
+
+// Arabic version
+.arabic {
+    header {
+        .top-menu {
+            float: left;
+        }
+        .container {
+            position: relative;
+        }
+
+        .nav-desktop,.right-container {
+            float: left;
+        }
+        .sign-in-section {
+            margin-right: 10px;
+        }
+        .currency {
+            border-right: 2px solid #626970;
+            padding-right: 10px;
+        }
+        .language {
+            border-right: 0;
+            margin: 0;
+        }
+    }
+    .right-container{
+        float: right;
+    }
+}
+
+
+// Responsive for header section
+@include breakpoint(touchDevice) {
+    header {
+        height: 100px;
+        padding-bottom: 10px;
+    }
+    .right-container {
+        //margin-top: 20px;
+        float:left;
+        display: flex;
+        align-items: baseline;
+    }
+    .header-nav, .sign-in-section {
+        display: none;
+    }
+    .nav-desktop {
+        float: none;
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        right: 15px;
+    }
+    .navbar-responsive {
+        display: inline-block;
+        .hamburger-icon {
+            display: inline-block;
+            //margin-left: 10px;
+            width: 21px;
+            height:17px;
+            background-position: -174px -251px;
+        }
+    }
+    .logo {
+        display: block;
+        margin-top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        img {
+            width: 95px;
+        }
+    }
+    .top-menu {
+        text-align: center;
+        display: block;
+        float: none;
+    }
+    //  arabic responsive
+    .arabic header {
+        .right-container {
+            float: right;
+        }
+        .nav-desktop {
+            right: auto;
+            left: 15px;
+        }
+        .top-menu {
+            float: none;
+        }
+    }
+    .currency {
+        margin-right: 0;
+    }
+}
+
+
+.fix-to-top {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    height: 100px;
+    background: rgba(0,0,0, 0.7);
+    @include transition(0.4s, ease);
+    //transition: all 0.4s ease;
+}
